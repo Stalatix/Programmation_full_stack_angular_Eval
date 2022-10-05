@@ -14,6 +14,7 @@ export class EvaluationTableComponent implements OnInit {
   }
   @Input()
   public evaluations: Evaluation[] = [];
+
   ngOnInit(): void {
 
   }
