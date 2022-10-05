@@ -1,1 +1,3 @@
-<p>restaurant works!</p>
+<h2>La liste des restaurant : </h2>
+<app-restaurant-table [restaurants]="restaurants"></app-restaurant-table>
+<app-restaurant-form (restaurantsCreated)="createRestaurant($event)"></app-restaurant-form>

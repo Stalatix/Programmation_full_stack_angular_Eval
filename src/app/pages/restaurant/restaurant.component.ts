@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Restaurant} from "../../dto/restaurant.dto";
 import {RestaurantService} from "../../services/restaurant.service";
+import {RestaurantsFormContent} from "../../components/restaurant-form/restaurant-form.component";
 
 @Component({
   selector: 'app-restaurant',
@@ -20,9 +21,9 @@ export class RestaurantComponent implements OnInit {
     })
   }
 
-  public createRestaurant(livre: LivreFormContent): void {
-    this.livreService.createLivre(livre.titre).subscribe({
-      next: value => this.livres.push(value)
-    })
-  }
+  public createRestaurant(restaurant: RestaurantsFormContent): void {
+    this.RestaurantService.createRestaurant(restaurant.nom,restaurant.adresse).subscribe({
+        next: value => this.restaurants.push(value)
+  })
+ }
 }

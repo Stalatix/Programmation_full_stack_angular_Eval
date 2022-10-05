@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Restaurant} from "../../dto/restaurant.dto";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-restaurant-table',
@@ -8,7 +9,8 @@ import {Restaurant} from "../../dto/restaurant.dto";
 })
 export class RestaurantTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {
+  }
   @Input()
   public restaurants: Restaurant[] = [];
 
@@ -16,4 +18,7 @@ export class RestaurantTableComponent implements OnInit {
   public ngOnInit(): void {
   }
 
+  public navigateEval() :void {
+    this.router.navigate(["evaluations"])
+  }
 }

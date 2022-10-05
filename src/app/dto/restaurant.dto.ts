@@ -4,7 +4,7 @@ export interface Restaurant {
   nom : string;
   adresse : string;
   evaluations : Evaluation[];
-
+  moyenne : number;
 }
 
 export interface Evaluation {

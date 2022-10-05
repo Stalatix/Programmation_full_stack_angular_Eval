@@ -1,1 +1,16 @@
-<p>restaurant-form works!</p>
+<h1>Fourmulaire d'ajout d'un Restaurant</h1>
+<form #form="ngForm" (ngSubmit)="save(form)">
+  <div>
+    Nom du restaurant:
+    <input type="text" name="titre" #nom="ngModel" [(ngModel)]="nomInput" maxlength="90" required>
+    <span style="color: red" *ngIf="!nom.valid && nom.errors?.['required']">Le champs est requis</span>
+    <span style="color: red" *ngIf="!nom.valid && nom.errors?.['maxlength']">Le champs est trop long</span>
+  </div>
+  <div>
+    Adresse de l'établissement :
+    <input type="text" name="auteur" #adresse="ngModel" [(ngModel)]="adresseInput" maxlength="255" required>
+    <span style="color: red" *ngIf="!adresse.valid && adresse.errors?.['required']">Le champs est requis</span>
+    <span style="color: red" *ngIf="!adresse.valid && adresse.errors?.['maxlength']">Le champs est trop long</span>
+  </div>
+  <button type="submit">Ajouter</button>
+</form>
