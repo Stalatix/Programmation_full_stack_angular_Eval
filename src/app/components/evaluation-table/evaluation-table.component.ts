@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {Evaluation, Restaurant} from "../../dto/restaurant.dto";
 
 @Component({
   selector: 'app-evaluation-table',
@@ -8,9 +9,11 @@ import {Router} from "@angular/router";
 })
 export class EvaluationTableComponent implements OnInit {
 
+
   constructor(private router: Router) {
   }
-
+  @Input()
+  public evaluations: Evaluation[] = [];
   ngOnInit(): void {
 
   }
