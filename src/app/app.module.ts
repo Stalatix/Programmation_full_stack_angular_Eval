@@ -7,12 +7,14 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { RestaurantTableComponent } from './components/restaurant-table/restaurant-table.component';
 import { RestaurantFormComponent } from './components/restaurant-form/restaurant-form.component';
+import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RestaurantTableComponent,
-    RestaurantFormComponent
+    RestaurantFormComponent,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,
@@ -23,4 +25,6 @@ import { RestaurantFormComponent } from './components/restaurant-form/restaurant
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
